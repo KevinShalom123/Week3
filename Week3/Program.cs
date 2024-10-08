@@ -5,6 +5,15 @@
     string ISBN;
     int NoOFPages;
 
+    public Book(string bookTitle, string bookAuthor, string bookISBN, int bookNoOFPages)
+    {
+        Title = bookTitle;
+        Author = bookAuthor;
+        ISBN = bookISBN;
+        NoOFPages = bookNoOFPages;
+    }
+    
+
     void DisplayInfo()
     {
         Console.WriteLine("Book Information");
@@ -18,18 +27,8 @@
 
         static void Main(String[] args)
     {
-        Book book = new Book();
-        book.Title = "C# For Beginners";
-        book.Author = "Ramesh & Sumesh";
-        book.ISBN = "14261625";
-        book.NoOFPages=200;
-
-
-        Book book2 = new Book();
-        book2.Title = "C# FOR LOSERS";
-        book2.Author = "NITISH KUMAR REDDY";
-        book2.ISBN = "142836273637";
-        book2.NoOFPages = 300;
+        Book book = new Book("C# For Beginners", "Ramesh", "123453", 200);
+        Book book2 = new Book("C# For Experts", "Reddy", "123233", 400);
 
         book.DisplayInfo();
         book2.DisplayInfo();
